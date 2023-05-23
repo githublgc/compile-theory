@@ -1,0 +1,29 @@
+main ()
+{
+  int D.2318;
+
+  {
+    int a;
+    int b;
+
+    try
+      {
+        scanf ("%d%d", &a, &b);
+        a.0_1 = a;
+        b.1_2 = b;
+        _3 = a.0_1 + b.1_2;
+        printf ("Hello World %d\n", _3);
+        D.2318 = 0;
+        return D.2318;
+      }
+    finally
+      {
+        a = {CLOBBER};
+        b = {CLOBBER};
+      }
+  }
+  D.2318 = 0;
+  return D.2318;
+}
+
+

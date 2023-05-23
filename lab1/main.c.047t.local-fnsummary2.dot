@@ -1,0 +1,32 @@
+digraph "main.c.047t.local-fnsummary2" {
+overlap=false;
+subgraph "cluster_main" {
+	style="dashed";
+	color="black";
+	label="main ()";
+	fn_0_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_0_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_0_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{\<bb\ 2\>:\l\
+|scanf\ (\"%d%d\",\ &a,\ &b);\l\
+|a.0_1\ =\ a;\l\
+|b.1_2\ =\ b;\l\
+|_3\ =\ a.0_1\ +\ b.1_2;\l\
+|printf\ (\"Hello\ World\ %d\\n\",\ _3);\l\
+|_7\ =\ 0;\l\
+|a\ =\{v\}\ \{CLOBBER\};\l\
+|b\ =\{v\}\ \{CLOBBER\};\l\
+}"];
+
+	fn_0_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{\<bb\ 3\>:\l\
+|\<L1\>:\l\
+|return\ _7;\l\
+}"];
+
+	fn_0_basic_block_0:s -> fn_0_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true];
+	fn_0_basic_block_2:s -> fn_0_basic_block_3:n [style="solid,bold",color=blue,weight=100,constraint=true];
+	fn_0_basic_block_3:s -> fn_0_basic_block_1:n [style="solid,bold",color=black,weight=10,constraint=true];
+	fn_0_basic_block_0:s -> fn_0_basic_block_1:n [style="invis",constraint=true];
+}
+}
