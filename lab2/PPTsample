@@ -1,0 +1,32 @@
+.arch armv7-a
+	
+	.arm
+	.data
+	.global a
+	.align 4
+	.size a,4
+	a:
+	.word 8
+	.global b
+	.align 4
+	.size b,4
+	b:
+	.word 9
+	
+	.global main
+	.type main,%function
+	main:
+	.L1:
+	ldr r0,addr_a0
+	ldr r1,[r0]
+	ldr r0,adr_b0
+	ldr r0,[r0]
+	add r0,r1,r0
+	bx lr
+	
+	addr_b0:
+	.word b
+	addr_a0:
+	.word a
+	.ident "NKU-TEDA"
+	
